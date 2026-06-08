@@ -1,25 +1,26 @@
 // ============================================
 // DATASETS DATA – Go-Epic Backend
-// 4 datasets for go-epic learning platform
+// 52 datasets sourced from Go-Epic dataset:
+// https://drive.google.com/file/d/1RZHa2aXHAGIzzEnyqzCYor2kzEmbvsrY/view?usp=drive_link
 // ============================================
 
 const datasets = [
   {
     id: 'ds_001',
     name: 'Go Concurrency Patterns',
-    description:
-      'A comprehensive dataset of Go concurrency patterns including goroutines, channels, mutexes, and worker pools. Ideal for learning concurrent programming.',
+    description: 'A comprehensive dataset of Go concurrency patterns including goroutines, channels, mutexes, and worker pools. Ideal for learning concurrent programming.',
     type: 'advanced',
     category: 'concurrency',
+    difficulty: 'advanced',
     size: 5,
     source: 'ultimate',
     tags: ['go', 'goroutines', 'channels', 'mutex', 'worker'],
     data: [
-      { pattern: 'Worker Pool',     description: 'Distributes work across N workers using buffered channels', complexity: 'O(n/w)', useCase: 'Parallel task execution' },
-      { pattern: 'Fan-Out Fan-In',  description: 'Splits work to multiple goroutines and collects results', complexity: 'O(n)',   useCase: 'Parallel data processing' },
-      { pattern: 'Pipeline',        description: 'Chains operations using channels for stream processing',  complexity: 'O(n)',   useCase: 'ETL pipelines, data streams' },
-      { pattern: 'Done Channel',    description: 'Cancels goroutines gracefully using a shared done chan', complexity: 'O(1)',   useCase: 'Cancellation propagation' },
-      { pattern: 'Error Group',     description: 'Manages goroutines and collects first error',            complexity: 'O(n)',   useCase: 'Safe parallel API calls' }
+      { pattern: 'Worker Pool',    description: 'Distributes work across N workers using buffered channels', complexity: 'O(n/w)', useCase: 'Parallel task execution' },
+      { pattern: 'Fan-Out Fan-In', description: 'Splits work to multiple goroutines and collects results',  complexity: 'O(n)',   useCase: 'Parallel data processing' },
+      { pattern: 'Pipeline',       description: 'Chains operations using channels for stream processing',   complexity: 'O(n)',   useCase: 'ETL pipelines, data streams' },
+      { pattern: 'Done Channel',   description: 'Cancels goroutines gracefully using a shared done chan',   complexity: 'O(1)',   useCase: 'Cancellation propagation' },
+      { pattern: 'Error Group',    description: 'Manages goroutines and collects first error',              complexity: 'O(n)',   useCase: 'Safe parallel API calls' }
     ],
     isActive: true,
     createdAt: '2024-01-01T00:00:00.000Z'
@@ -27,21 +28,21 @@ const datasets = [
   {
     id: 'ds_002',
     name: 'Algorithm Complexity Reference',
-    description:
-      'Reference dataset containing time and space complexity for the most commonly used algorithms in competitive programming and system design.',
+    description: 'Reference dataset containing time and space complexity for the most commonly used algorithms in competitive programming and system design.',
     type: 'basic',
     category: 'algorithms',
+    difficulty: 'basic',
     size: 7,
     source: 'custom',
     tags: ['algorithms', 'complexity', 'big-o', 'reference', 'cheatsheet'],
     data: [
-      { algorithm: 'Binary Search', time: 'O(log n)',        space: 'O(1)',      category: 'searching' },
-      { algorithm: 'Bubble Sort',   time: 'O(n²)',           space: 'O(1)',      category: 'sorting' },
-      { algorithm: 'Merge Sort',    time: 'O(n log n)',      space: 'O(n)',      category: 'sorting' },
-      { algorithm: 'Quick Sort',    time: 'O(n log n) avg',  space: 'O(log n)', category: 'sorting' },
-      { algorithm: 'DFS',           time: 'O(V+E)',          space: 'O(V)',      category: 'graph' },
-      { algorithm: 'BFS',           time: 'O(V+E)',          space: 'O(V)',      category: 'graph' },
-      { algorithm: "Dijkstra's",    time: 'O((V+E) log V)', space: 'O(V)',      category: 'graph' }
+      { algorithm: 'Binary Search', time: 'O(log n)',       space: 'O(1)',      category: 'searching' },
+      { algorithm: 'Bubble Sort',   time: 'O(n^2)',         space: 'O(1)',      category: 'sorting' },
+      { algorithm: 'Merge Sort',    time: 'O(n log n)',     space: 'O(n)',      category: 'sorting' },
+      { algorithm: 'Quick Sort',    time: 'O(n log n) avg', space: 'O(log n)', category: 'sorting' },
+      { algorithm: 'DFS',           time: 'O(V+E)',         space: 'O(V)',      category: 'graph' },
+      { algorithm: 'BFS',           time: 'O(V+E)',         space: 'O(V)',      category: 'graph' },
+      { algorithm: "Dijkstra",      time: 'O((V+E) log V)', space: 'O(V)',      category: 'graph' }
     ],
     isActive: true,
     createdAt: '2024-01-02T00:00:00.000Z'
@@ -49,20 +50,20 @@ const datasets = [
   {
     id: 'ds_003',
     name: 'DSA Problem Bank',
-    description:
-      'Collection of categorized DSA problems from LeetCode, Codeforces, and Go-Epic platform. Includes difficulty ratings, acceptance rates, and topic coverage.',
+    description: 'Collection of categorized DSA problems from LeetCode, Codeforces, and Go-Epic platform. Includes difficulty ratings, acceptance rates, and topic coverage.',
     type: 'advanced',
     category: 'problems',
+    difficulty: 'advanced',
     size: 6,
     source: 'ultimate',
     tags: ['dsa', 'problems', 'leetcode', 'competitive-programming', 'categorized'],
     data: [
-      { category: 'Arrays',   count: 45, avgDifficulty: 'medium', acceptanceRate: '62%' },
-      { category: 'Trees',    count: 30, avgDifficulty: 'medium', acceptanceRate: '55%' },
-      { category: 'Graphs',   count: 25, avgDifficulty: 'hard',   acceptanceRate: '42%' },
-      { category: 'DP',       count: 40, avgDifficulty: 'hard',   acceptanceRate: '38%' },
-      { category: 'Strings',  count: 35, avgDifficulty: 'easy',   acceptanceRate: '70%' },
-      { category: 'Stacks',   count: 20, avgDifficulty: 'easy',   acceptanceRate: '68%' }
+      { category: 'Arrays',  count: 45, avgDifficulty: 'medium', acceptanceRate: '62%' },
+      { category: 'Trees',   count: 30, avgDifficulty: 'medium', acceptanceRate: '55%' },
+      { category: 'Graphs',  count: 25, avgDifficulty: 'hard',   acceptanceRate: '42%' },
+      { category: 'DP',      count: 40, avgDifficulty: 'hard',   acceptanceRate: '38%' },
+      { category: 'Strings', count: 35, avgDifficulty: 'easy',   acceptanceRate: '70%' },
+      { category: 'Stacks',  count: 20, avgDifficulty: 'easy',   acceptanceRate: '68%' }
     ],
     isActive: true,
     createdAt: '2024-01-03T00:00:00.000Z'
@@ -70,21 +71,1053 @@ const datasets = [
   {
     id: 'ds_004',
     name: 'Mutex Operations Benchmark',
-    description:
-      'Performance benchmark dataset for mutex, semaphore, and channel operations under different concurrency loads. Measured on a 4-core machine.',
+    description: 'Performance benchmark dataset for mutex, semaphore, and channel operations under different concurrency loads. Measured on a 4-core machine.',
     type: 'advanced',
     category: 'concurrency',
+    difficulty: 'advanced',
     size: 4,
     source: 'ultimate',
     tags: ['mutex', 'benchmark', 'concurrency', 'worker', 'performance', 'profiling'],
     data: [
-      { operation: 'Mutex Lock/Unlock',   avgTimeNs: 25,  threads: 4,  contention: 'low'    },
-      { operation: 'RWMutex RLock',       avgTimeNs: 12,  threads: 8,  contention: 'low'    },
-      { operation: 'Channel Send',        avgTimeNs: 45,  threads: 4,  contention: 'medium' },
-      { operation: 'Channel Receive',     avgTimeNs: 43,  threads: 4,  contention: 'medium' }
+      { operation: 'Mutex Lock/Unlock', avgTimeNs: 25, threads: 4, contention: 'low'    },
+      { operation: 'RWMutex RLock',     avgTimeNs: 12, threads: 8, contention: 'low'    },
+      { operation: 'Channel Send',      avgTimeNs: 45, threads: 4, contention: 'medium' },
+      { operation: 'Channel Receive',   avgTimeNs: 43, threads: 4, contention: 'medium' }
     ],
     isActive: true,
     createdAt: '2024-01-04T00:00:00.000Z'
+  },
+  {
+    id: 'ds_005',
+    name: 'Atomic Operations Reference',
+    description: 'Dataset covering atomic operations in Go using sync/atomic package. Includes CompareAndSwap, Add, Load, Store operations with benchmark data.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['atomic', 'sync', 'concurrency', 'go', 'lock-free'],
+    data: [
+      { operation: 'atomic.AddInt64',       avgTimeNs: 8,  goroutines: 100, safe: true },
+      { operation: 'atomic.LoadInt64',       avgTimeNs: 3,  goroutines: 100, safe: true },
+      { operation: 'atomic.StoreInt64',      avgTimeNs: 5,  goroutines: 100, safe: true },
+      { operation: 'atomic.CompareAndSwap',  avgTimeNs: 12, goroutines: 100, safe: true },
+      { operation: 'atomic.SwapInt64',       avgTimeNs: 9,  goroutines: 100, safe: true },
+      { operation: 'sync.Mutex Lock/Unlock', avgTimeNs: 25, goroutines: 100, safe: true }
+    ],
+    isActive: true,
+    createdAt: '2024-01-05T00:00:00.000Z'
+  },
+  {
+    id: 'ds_006',
+    name: 'Token Bucket Rate Limiter',
+    description: 'Implementation dataset for token bucket algorithm used in API rate limiting. Covers burst capacity, refill rate, and concurrent access patterns.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'previous-ultimate-dataset',
+    tags: ['token', 'rate-limiting', 'concurrency', 'bucket', 'api-design'],
+    data: [
+      { scenario: 'Burst Traffic',      capacity: 100, refillRate: 10, requestsAllowed: 100, requestsDenied: 50  },
+      { scenario: 'Steady Traffic',     capacity: 50,  refillRate: 5,  requestsAllowed: 95,  requestsDenied: 5   },
+      { scenario: 'Spike Traffic',      capacity: 20,  refillRate: 2,  requestsAllowed: 20,  requestsDenied: 180 },
+      { scenario: 'Low Traffic',        capacity: 100, refillRate: 20, requestsAllowed: 30,  requestsDenied: 0   },
+      { scenario: 'Concurrent Clients', capacity: 200, refillRate: 50, requestsAllowed: 200, requestsDenied: 100 }
+    ],
+    isActive: true,
+    createdAt: '2024-01-06T00:00:00.000Z'
+  },
+  {
+    id: 'ds_007',
+    name: 'Goroutine Lifecycle States',
+    description: 'Dataset documenting all possible states of a Go goroutine, transitions between states, and common causes for each state during program execution.',
+    type: 'basic',
+    category: 'concurrency',
+    difficulty: 'basic',
+    size: 6,
+    source: 'custom',
+    tags: ['goroutines', 'go', 'scheduler', 'concurrency', 'runtime'],
+    data: [
+      { state: 'Runnable',  description: 'Waiting to be picked up by the OS thread',     transition: 'Running' },
+      { state: 'Running',   description: 'Currently executing on an OS thread (M)',       transition: 'Runnable or Waiting' },
+      { state: 'Waiting',   description: 'Blocked on channel, mutex, or I/O',             transition: 'Runnable' },
+      { state: 'Dead',      description: 'Goroutine has completed and exited',             transition: 'None' },
+      { state: 'Syscall',   description: 'Executing a system call, OS thread is blocked', transition: 'Running' },
+      { state: 'Preempted', description: 'Voluntarily yielded CPU via runtime scheduler', transition: 'Runnable' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-07T00:00:00.000Z'
+  },
+  {
+    id: 'ds_008',
+    name: 'Channel Communication Patterns',
+    description: 'Patterns and best practices for Go channel-based communication including buffered vs unbuffered channels, select statements, and channel direction.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 7,
+    source: 'ultimate',
+    tags: ['channels', 'goroutines', 'go', 'select', 'buffered', 'unbuffered'],
+    data: [
+      { pattern: 'Unbuffered Channel',   blocking: true,  capacity: 0,    useCase: 'Synchronization handshake' },
+      { pattern: 'Buffered Channel',     blocking: false, capacity: 'N',  useCase: 'Decoupled producer-consumer' },
+      { pattern: 'Select Statement',     blocking: false, capacity: 'N/A', useCase: 'Multi-channel listening'    },
+      { pattern: 'Directional Channel',  blocking: true,  capacity: 0,    useCase: 'Enforced send/receive roles' },
+      { pattern: 'Range over Channel',   blocking: true,  capacity: 'N',  useCase: 'Iterating channel values'   },
+      { pattern: 'Close Channel',        blocking: false, capacity: 'N/A', useCase: 'Signal channel completion'  },
+      { pattern: 'Nil Channel',          blocking: true,  capacity: 0,    useCase: 'Disable select case'         }
+    ],
+    isActive: true,
+    createdAt: '2024-01-08T00:00:00.000Z'
+  },
+  {
+    id: 'ds_009',
+    name: 'Concurrency-Patterns Topic Collection',
+    description: 'Structured topic reference for Go concurrency patterns including definitions, code references, and real-world use cases as assigned in Go-Epic syllabus.',
+    type: 'advanced',
+    category: 'concurrency-patterns',
+    difficulty: 'advanced',
+    size: 8,
+    source: 'previous-ultimate-dataset',
+    tags: ['concurrency-patterns', 'go', 'goroutines', 'mutex', 'worker', 'atomic'],
+    data: [
+      { topic: 'Goroutines',      subtopics: ['Creation', 'Lifecycle', 'Scheduling'],        problems: 12 },
+      { topic: 'Channels',        subtopics: ['Buffered', 'Unbuffered', 'Direction'],         problems: 15 },
+      { topic: 'Mutex',           subtopics: ['Lock', 'RWMutex', 'Deadlock prevention'],      problems: 10 },
+      { topic: 'Atomic Ops',      subtopics: ['Add', 'CAS', 'Load/Store'],                    problems: 8  },
+      { topic: 'Worker Pool',     subtopics: ['Fixed pool', 'Dynamic pool', 'Backpressure'],  problems: 6  },
+      { topic: 'Pipeline',        subtopics: ['Stages', 'Fan-out', 'Fan-in'],                 problems: 7  },
+      { topic: 'Select',          subtopics: ['Multi-channel', 'Timeout', 'Default case'],    problems: 5  },
+      { topic: 'Context',         subtopics: ['Cancellation', 'Deadlines', 'Values'],         problems: 9  }
+    ],
+    isActive: true,
+    createdAt: '2024-01-09T00:00:00.000Z'
+  },
+  {
+    id: 'ds_010',
+    name: 'Sorting Algorithms Benchmark',
+    description: 'Comprehensive benchmark dataset comparing sorting algorithms across different input sizes and types. Includes random, sorted, reverse-sorted, and nearly-sorted arrays.',
+    type: 'basic',
+    category: 'algorithms',
+    difficulty: 'basic',
+    size: 8,
+    source: 'custom',
+    tags: ['sorting', 'algorithms', 'benchmark', 'complexity', 'performance'],
+    data: [
+      { algorithm: 'Bubble Sort',    n_1000: '0.8ms',  n_10000: '80ms',  n_100000: '8s',    bestCase: 'O(n)', worstCase: 'O(n^2)' },
+      { algorithm: 'Selection Sort', n_1000: '0.5ms',  n_10000: '50ms',  n_100000: '5s',    bestCase: 'O(n^2)', worstCase: 'O(n^2)' },
+      { algorithm: 'Insertion Sort', n_1000: '0.3ms',  n_10000: '30ms',  n_100000: '3s',    bestCase: 'O(n)', worstCase: 'O(n^2)' },
+      { algorithm: 'Merge Sort',     n_1000: '0.05ms', n_10000: '0.6ms', n_100000: '8ms',   bestCase: 'O(n log n)', worstCase: 'O(n log n)' },
+      { algorithm: 'Quick Sort',     n_1000: '0.04ms', n_10000: '0.5ms', n_100000: '6ms',   bestCase: 'O(n log n)', worstCase: 'O(n^2)' },
+      { algorithm: 'Heap Sort',      n_1000: '0.06ms', n_10000: '0.7ms', n_100000: '9ms',   bestCase: 'O(n log n)', worstCase: 'O(n log n)' },
+      { algorithm: 'Radix Sort',     n_1000: '0.03ms', n_10000: '0.3ms', n_100000: '3.5ms', bestCase: 'O(nk)', worstCase: 'O(nk)' },
+      { algorithm: 'Tim Sort',       n_1000: '0.02ms', n_10000: '0.25ms',n_100000: '3ms',   bestCase: 'O(n)', worstCase: 'O(n log n)' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-10T00:00:00.000Z'
+  },
+  {
+    id: 'ds_011',
+    name: 'Graph Traversal Patterns',
+    description: 'Dataset covering BFS, DFS, and advanced graph traversal algorithms with examples on directed, undirected, cyclic, and acyclic graphs.',
+    type: 'advanced',
+    category: 'graphs',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['graphs', 'bfs', 'dfs', 'traversal', 'algorithms'],
+    data: [
+      { algorithm: 'BFS',          dataStructure: 'Queue',      detects: 'Shortest path (unweighted)',  complexity: 'O(V+E)' },
+      { algorithm: 'DFS',          dataStructure: 'Stack',      detects: 'Cycles, connected components', complexity: 'O(V+E)' },
+      { algorithm: "Dijkstra",     dataStructure: 'Min-Heap',   detects: 'Shortest path (weighted)',     complexity: 'O((V+E) log V)' },
+      { algorithm: 'Bellman-Ford', dataStructure: 'Array',      detects: 'Negative cycles',              complexity: 'O(VE)' },
+      { algorithm: 'Floyd-Warsh',  dataStructure: 'Matrix',     detects: 'All-pairs shortest path',      complexity: 'O(V^3)' },
+      { algorithm: 'Topological',  dataStructure: 'Stack',      detects: 'Linear order in DAG',          complexity: 'O(V+E)' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-11T00:00:00.000Z'
+  },
+  {
+    id: 'ds_012',
+    name: 'Dynamic Programming Patterns',
+    description: 'Classic DP patterns with memoization and tabulation approaches. Covers Knapsack, LCS, LIS, Coin Change, and Matrix Chain Multiplication.',
+    type: 'advanced',
+    category: 'dynamic-programming',
+    difficulty: 'advanced',
+    size: 8,
+    source: 'previous-ultimate-dataset',
+    tags: ['dp', 'memoization', 'tabulation', 'knapsack', 'lcs', 'algorithms'],
+    data: [
+      { pattern: 'Fibonacci',        approach: 'Memoization',  complexity: 'O(n)',   spaceComplexity: 'O(n)' },
+      { pattern: '0/1 Knapsack',     approach: 'Tabulation',   complexity: 'O(nW)',  spaceComplexity: 'O(nW)' },
+      { pattern: 'LCS',              approach: 'Tabulation',   complexity: 'O(mn)',  spaceComplexity: 'O(mn)' },
+      { pattern: 'LIS',              approach: 'Binary Search', complexity: 'O(n log n)', spaceComplexity: 'O(n)' },
+      { pattern: 'Coin Change',      approach: 'Tabulation',   complexity: 'O(nC)',  spaceComplexity: 'O(C)' },
+      { pattern: 'Edit Distance',    approach: 'Tabulation',   complexity: 'O(mn)',  spaceComplexity: 'O(mn)' },
+      { pattern: 'Matrix Chain',     approach: 'Memoization',  complexity: 'O(n^3)', spaceComplexity: 'O(n^2)' },
+      { pattern: 'Partition Equal',  approach: 'Tabulation',   complexity: 'O(nS)',  spaceComplexity: 'O(S)' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-12T00:00:00.000Z'
+  },
+  {
+    id: 'ds_013',
+    name: 'Go Standard Library Overview',
+    description: 'Quick reference dataset for the most important Go standard library packages used in backend development, systems programming, and concurrent applications.',
+    type: 'basic',
+    category: 'go-lang',
+    difficulty: 'basic',
+    size: 10,
+    source: 'custom',
+    tags: ['go', 'stdlib', 'packages', 'backend', 'reference'],
+    data: [
+      { pkg: 'sync',         purpose: 'Mutex, WaitGroup, Once, Map for safe concurrency' },
+      { pkg: 'sync/atomic',  purpose: 'Low-level atomic memory operations' },
+      { pkg: 'context',      purpose: 'Request scoped values, cancellation, deadlines' },
+      { pkg: 'net/http',     purpose: 'HTTP client and server implementations' },
+      { pkg: 'encoding/json', purpose: 'JSON encoding and decoding' },
+      { pkg: 'os',           purpose: 'Operating system interface, file I/O' },
+      { pkg: 'fmt',          purpose: 'Formatted I/O with printing and scanning' },
+      { pkg: 'strings',      purpose: 'String manipulation functions' },
+      { pkg: 'strconv',      purpose: 'String to basic type conversions' },
+      { pkg: 'time',         purpose: 'Time measurement and display' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-13T00:00:00.000Z'
+  },
+  {
+    id: 'ds_014',
+    name: 'REST API Design Principles',
+    description: 'Dataset of REST API design best practices and principles covering HTTP methods, status codes, endpoint naming conventions, versioning, and pagination.',
+    type: 'basic',
+    category: 'api-design',
+    difficulty: 'basic',
+    size: 7,
+    source: 'custom',
+    tags: ['rest', 'api', 'http', 'design', 'best-practices'],
+    data: [
+      { principle: 'Stateless',     description: 'Each request is independent, no server-side state' },
+      { principle: 'Resource-based', description: 'URLs represent resources, not actions' },
+      { principle: 'HTTP Methods',  description: 'GET=read, POST=create, PUT=replace, PATCH=update, DELETE=remove' },
+      { principle: 'Versioning',    description: 'Use /api/v1/ prefix to allow breaking changes' },
+      { principle: 'Pagination',    description: 'Use page/limit query params for large datasets' },
+      { principle: 'Status Codes',  description: '200 OK, 201 Created, 400 Bad Request, 401 Unauth, 404 Not Found, 500 Error' },
+      { principle: 'HATEOAS',       description: 'Include links to related resources in responses' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-14T00:00:00.000Z'
+  },
+  {
+    id: 'ds_015',
+    name: 'JWT Authentication Flow',
+    description: 'Step-by-step JWT authentication flow dataset covering token generation, claims structure, verification, refresh tokens, and common vulnerabilities.',
+    type: 'advanced',
+    category: 'authentication',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['jwt', 'auth', 'security', 'tokens', 'backend'],
+    data: [
+      { step: 1, action: 'User Login',      description: 'User sends credentials (email + password)' },
+      { step: 2, action: 'Verify Password', description: 'Server verifies bcrypt hash of password' },
+      { step: 3, action: 'Generate JWT',    description: 'Server creates token with claims: userId, role, exp' },
+      { step: 4, action: 'Client Stores',   description: 'Client stores JWT in localStorage or httpOnly cookie' },
+      { step: 5, action: 'Send Token',      description: 'Client sends token in Authorization: Bearer <token> header' },
+      { step: 6, action: 'Verify Token',    description: 'Server verifies signature and expiry on each request' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-15T00:00:00.000Z'
+  },
+  {
+    id: 'ds_016',
+    name: 'Worker Pool Advanced Configurations',
+    description: 'Advanced worker pool configuration dataset for production systems covering dynamic scaling, backpressure handling, graceful shutdown, and task prioritization.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'ultimate',
+    tags: ['worker', 'pool', 'concurrency', 'scaling', 'backpressure', 'goroutines'],
+    data: [
+      { config: 'Fixed Pool',        workers: 4,    queueSize: 100,  scaling: 'none',    shutdownType: 'graceful' },
+      { config: 'Dynamic Pool',      workers: '1-8', queueSize: 500, scaling: 'auto',    shutdownType: 'graceful' },
+      { config: 'Priority Queue',    workers: 4,    queueSize: 200,  scaling: 'none',    shutdownType: 'immediate' },
+      { config: 'Backpressure Pool', workers: 4,    queueSize: 10,   scaling: 'reject',  shutdownType: 'drain' },
+      { config: 'Batched Pool',      workers: 2,    queueSize: 1000, scaling: 'batched', shutdownType: 'graceful' },
+      { config: 'Context Pool',      workers: 4,    queueSize: 100,  scaling: 'cancel',  shutdownType: 'context' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-16T00:00:00.000Z'
+  },
+  {
+    id: 'ds_017',
+    name: 'HTTP Status Codes Reference',
+    description: 'Complete reference for HTTP status codes grouped by category (1xx, 2xx, 3xx, 4xx, 5xx) with descriptions and common use cases in REST APIs.',
+    type: 'basic',
+    category: 'api-design',
+    difficulty: 'basic',
+    size: 10,
+    source: 'custom',
+    tags: ['http', 'status-codes', 'rest', 'api', 'reference'],
+    data: [
+      { code: 200, name: 'OK',                    use: 'Successful GET or PATCH request' },
+      { code: 201, name: 'Created',               use: 'Resource created via POST' },
+      { code: 204, name: 'No Content',            use: 'Successful DELETE, no body returned' },
+      { code: 400, name: 'Bad Request',           use: 'Invalid input or missing required fields' },
+      { code: 401, name: 'Unauthorized',          use: 'Missing or invalid authentication token' },
+      { code: 403, name: 'Forbidden',             use: 'Authenticated but lacks permission' },
+      { code: 404, name: 'Not Found',             use: 'Resource does not exist' },
+      { code: 409, name: 'Conflict',              use: 'Duplicate resource (e.g., email already exists)' },
+      { code: 429, name: 'Too Many Requests',     use: 'Rate limit exceeded' },
+      { code: 500, name: 'Internal Server Error', use: 'Unexpected server-side failure' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-17T00:00:00.000Z'
+  },
+  {
+    id: 'ds_018',
+    name: 'Go Interface Design Patterns',
+    description: 'Dataset covering Go interface patterns including implicit implementation, empty interfaces, type assertions, and composition-based polymorphism.',
+    type: 'advanced',
+    category: 'go-lang',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'previous-ultimate-dataset',
+    tags: ['go', 'interfaces', 'design-patterns', 'polymorphism', 'composition'],
+    data: [
+      { pattern: 'Reader/Writer',   description: 'io.Reader/Writer interface for stream processing',       useCase: 'File, network, buffer I/O' },
+      { pattern: 'Stringer',        description: 'fmt.Stringer for custom string representation',           useCase: 'Logging, debugging, display' },
+      { pattern: 'Error Interface', description: 'error interface with Error() string method',              useCase: 'Custom error types' },
+      { pattern: 'Handler',         description: 'http.Handler for HTTP request processing',               useCase: 'Web servers, middleware' },
+      { pattern: 'Closer',          description: 'io.Closer for resource cleanup with defer pattern',      useCase: 'Files, connections, goroutines' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-18T00:00:00.000Z'
+  },
+  {
+    id: 'ds_019',
+    name: 'Data Structures Complexity Chart',
+    description: 'Time and space complexity comparison chart for all major data structures including arrays, linked lists, trees, heaps, graphs, and hash tables.',
+    type: 'basic',
+    category: 'data-structures',
+    difficulty: 'basic',
+    size: 9,
+    source: 'custom',
+    tags: ['data-structures', 'complexity', 'big-o', 'arrays', 'trees', 'heap'],
+    data: [
+      { ds: 'Array',        access: 'O(1)',     search: 'O(n)',     insert: 'O(n)',     delete: 'O(n)' },
+      { ds: 'Linked List',  access: 'O(n)',     search: 'O(n)',     insert: 'O(1)',     delete: 'O(1)' },
+      { ds: 'Stack',        access: 'O(n)',     search: 'O(n)',     insert: 'O(1)',     delete: 'O(1)' },
+      { ds: 'Queue',        access: 'O(n)',     search: 'O(n)',     insert: 'O(1)',     delete: 'O(1)' },
+      { ds: 'Hash Table',   access: 'N/A',      search: 'O(1) avg', insert: 'O(1) avg', delete: 'O(1) avg' },
+      { ds: 'BST',          access: 'O(log n)', search: 'O(log n)', insert: 'O(log n)', delete: 'O(log n)' },
+      { ds: 'Heap',         access: 'O(n)',     search: 'O(n)',     insert: 'O(log n)', delete: 'O(log n)' },
+      { ds: 'AVL Tree',     access: 'O(log n)', search: 'O(log n)', insert: 'O(log n)', delete: 'O(log n)' },
+      { ds: 'Graph (adj.)', access: 'O(V+E)',   search: 'O(V+E)',   insert: 'O(1)',     delete: 'O(V+E)' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-19T00:00:00.000Z'
+  },
+  {
+    id: 'ds_020',
+    name: 'Rate Limiting Algorithms',
+    description: 'Dataset comparing different rate limiting algorithms including Token Bucket, Leaky Bucket, Fixed Window, Sliding Window Log, and Sliding Window Counter.',
+    type: 'advanced',
+    category: 'api-design',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'ultimate',
+    tags: ['rate-limiting', 'token', 'bucket', 'sliding-window', 'api'],
+    data: [
+      { algorithm: 'Token Bucket',          burstAllowed: true,  memoryUsage: 'O(1)',  accuracy: 'high',    complexity: 'O(1)' },
+      { algorithm: 'Leaky Bucket',          burstAllowed: false, memoryUsage: 'O(1)',  accuracy: 'medium',  complexity: 'O(1)' },
+      { algorithm: 'Fixed Window',          burstAllowed: true,  memoryUsage: 'O(1)',  accuracy: 'low',     complexity: 'O(1)' },
+      { algorithm: 'Sliding Window Log',    burstAllowed: false, memoryUsage: 'O(n)',  accuracy: 'perfect', complexity: 'O(n)' },
+      { algorithm: 'Sliding Window Counter',burstAllowed: false, memoryUsage: 'O(1)',  accuracy: 'good',    complexity: 'O(1)' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-20T00:00:00.000Z'
+  },
+  {
+    id: 'ds_021',
+    name: 'Middleware Chain Patterns',
+    description: 'Dataset of Express.js and Go HTTP middleware patterns covering authentication, logging, rate limiting, error handling, and CORS in the middleware chain.',
+    type: 'advanced',
+    category: 'backend',
+    difficulty: 'advanced',
+    size: 7,
+    source: 'previous-ultimate-dataset',
+    tags: ['middleware', 'express', 'go', 'backend', 'auth', 'logging'],
+    data: [
+      { order: 1, middleware: 'CORS',         purpose: 'Allow/reject cross-origin requests',           critical: true  },
+      { order: 2, middleware: 'Body Parser',   purpose: 'Parse JSON and URL-encoded request bodies',   critical: true  },
+      { order: 3, middleware: 'Logger',        purpose: 'Log incoming requests with timestamp and IP', critical: false },
+      { order: 4, middleware: 'Rate Limiter',  purpose: 'Enforce request rate limits per IP/user',     critical: true  },
+      { order: 5, middleware: 'Auth',          purpose: 'Verify JWT and attach user to req object',    critical: true  },
+      { order: 6, middleware: 'Validator',     purpose: 'Validate request body before controller',     critical: false },
+      { order: 7, middleware: 'Error Handler', purpose: 'Catch and format all errors uniformly',       critical: true  }
+    ],
+    isActive: true,
+    createdAt: '2024-01-21T00:00:00.000Z'
+  },
+  {
+    id: 'ds_022',
+    name: 'Tree Traversal Algorithms',
+    description: 'Binary tree traversal dataset with in-order, pre-order, post-order, and level-order traversal patterns including recursive and iterative approaches.',
+    type: 'basic',
+    category: 'trees',
+    difficulty: 'basic',
+    size: 6,
+    source: 'custom',
+    tags: ['trees', 'traversal', 'binary-tree', 'bfs', 'dfs', 'algorithms'],
+    data: [
+      { traversal: 'Inorder',     order: 'Left, Root, Right', approach: 'Recursive/Iterative', output: 'Sorted BST values' },
+      { traversal: 'Preorder',    order: 'Root, Left, Right', approach: 'Recursive/Iterative', output: 'Tree copy / serialization' },
+      { traversal: 'Postorder',   order: 'Left, Right, Root', approach: 'Recursive/Iterative', output: 'Delete tree, eval expression' },
+      { traversal: 'Level Order', order: 'Level by level',    approach: 'Queue (BFS)',          output: 'Level-by-level processing' },
+      { traversal: 'Zigzag',      order: 'Alternating levels',approach: 'Deque',               output: 'Zigzag level order' },
+      { traversal: 'Boundary',    order: 'Left+Leaf+Right',   approach: 'Multiple DFS',        output: 'Boundary traversal' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-22T00:00:00.000Z'
+  },
+  {
+    id: 'ds_023',
+    name: 'Heap and Priority Queue Patterns',
+    description: 'Dataset covering min-heap, max-heap, and priority queue implementations for K-closest elements, K-largest numbers, and scheduling algorithms.',
+    type: 'advanced',
+    category: 'data-structures',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['heap', 'priority-queue', 'min-heap', 'max-heap', 'sorting', 'scheduling'],
+    data: [
+      { pattern: 'K Largest Elements',  structure: 'Min-Heap(k)',  complexity: 'O(n log k)', useCase: 'Top-K problems' },
+      { pattern: 'K Smallest Elements', structure: 'Max-Heap(k)',  complexity: 'O(n log k)', useCase: 'Bottom-K problems' },
+      { pattern: 'Merge K Lists',       structure: 'Min-Heap',     complexity: 'O(n log k)', useCase: 'Merge sorted streams' },
+      { pattern: 'Median of Stream',    structure: 'Min+Max Heap', complexity: 'O(log n)',   useCase: 'Running median' },
+      { pattern: 'Task Scheduling',     structure: 'Max-Heap',     complexity: 'O(n log n)', useCase: 'CPU task scheduling' },
+      { pattern: 'Dijkstra',            structure: 'Min-Heap',     complexity: 'O(E log V)', useCase: 'Shortest path' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-23T00:00:00.000Z'
+  },
+  {
+    id: 'ds_024',
+    name: 'Sliding Window Technique',
+    description: 'Sliding window algorithm patterns for subarray and substring problems. Covers fixed-size windows, variable-size windows, and two-pointer approaches.',
+    type: 'advanced',
+    category: 'algorithms',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'ultimate',
+    tags: ['sliding-window', 'two-pointers', 'arrays', 'strings', 'algorithms'],
+    data: [
+      { problem: 'Max Sum Subarray K',    windowType: 'Fixed',    complexity: 'O(n)', approach: 'Fixed window sum' },
+      { problem: 'Longest no-repeat sub', windowType: 'Variable', complexity: 'O(n)', approach: 'HashSet + expand/shrink' },
+      { problem: 'Min Window Substring',  windowType: 'Variable', complexity: 'O(n)', approach: 'HashMap + two pointers' },
+      { problem: 'Sliding Window Max',    windowType: 'Fixed',    complexity: 'O(n)', approach: 'Monotonic deque' },
+      { problem: 'Longest Ones (K flips)',windowType: 'Variable', complexity: 'O(n)', approach: 'Count zeros in window' },
+      { problem: 'Permutation in String', windowType: 'Fixed',    complexity: 'O(n)', approach: 'Frequency map comparison' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-24T00:00:00.000Z'
+  },
+  {
+    id: 'ds_025',
+    name: 'Recursion and Backtracking Patterns',
+    description: 'Dataset of recursive and backtracking algorithm patterns for permutations, combinations, N-Queens, Sudoku solver, and path finding problems.',
+    type: 'advanced',
+    category: 'algorithms',
+    difficulty: 'advanced',
+    size: 7,
+    source: 'previous-ultimate-dataset',
+    tags: ['recursion', 'backtracking', 'permutations', 'combinations', 'n-queens'],
+    data: [
+      { problem: 'Permutations',        stateSpace: 'n!',    pruning: false, complexity: 'O(n * n!)' },
+      { problem: 'Combinations',        stateSpace: 'C(n,k)', pruning: true, complexity: 'O(C(n,k))' },
+      { problem: 'Subsets',             stateSpace: '2^n',   pruning: false, complexity: 'O(n * 2^n)' },
+      { problem: 'N-Queens',            stateSpace: 'n!',    pruning: true,  complexity: 'O(n!)' },
+      { problem: 'Sudoku Solver',       stateSpace: '9^81',  pruning: true,  complexity: 'O(9^(n*n))' },
+      { problem: 'Word Search',         stateSpace: '4^n',   pruning: true,  complexity: 'O(n * 4^L)' },
+      { problem: 'Palindrome Partiting',stateSpace: '2^n',   pruning: true,  complexity: 'O(n * 2^n)' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-25T00:00:00.000Z'
+  },
+  {
+    id: 'ds_026',
+    name: 'Deadlock Prevention Strategies',
+    description: 'Dataset covering deadlock conditions (Coffman conditions), detection algorithms, prevention strategies, and avoidance techniques in concurrent systems.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'ultimate',
+    tags: ['deadlock', 'concurrency', 'mutex', 'prevention', 'go'],
+    data: [
+      { strategy: 'Lock Ordering',   description: 'Always acquire locks in a consistent global order',   prevents: 'Circular wait' },
+      { strategy: 'Lock Timeout',    description: 'Use timed lock with TryLock and retry logic',         prevents: 'Indefinite blocking' },
+      { strategy: 'Avoid Nesting',   description: 'Never hold lock A while acquiring lock B',             prevents: 'Circular wait' },
+      { strategy: 'Channel-first',   description: 'Prefer channels over shared memory in Go',            prevents: 'Most deadlocks' },
+      { strategy: 'Context Cancel',  description: 'Use context with deadline to abort stuck goroutines', prevents: 'Goroutine leak' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-26T00:00:00.000Z'
+  },
+  {
+    id: 'ds_027',
+    name: 'Go Error Handling Patterns',
+    description: 'Dataset of idiomatic Go error handling patterns including sentinel errors, error wrapping, custom error types, and errors.As/Is usage.',
+    type: 'basic',
+    category: 'go-lang',
+    difficulty: 'basic',
+    size: 6,
+    source: 'custom',
+    tags: ['go', 'error-handling', 'errors', 'wrapping', 'sentinel'],
+    data: [
+      { pattern: 'Sentinel Error',   example: 'var ErrNotFound = errors.New("not found")', useCase: 'Package-level known errors' },
+      { pattern: 'Error Wrapping',   example: 'fmt.Errorf("query failed: %w", err)',        useCase: 'Preserve error chain' },
+      { pattern: 'Custom Error',     example: 'type ValidationError struct { Field string }',useCase: 'Structured error info' },
+      { pattern: 'errors.Is',        example: 'errors.Is(err, ErrNotFound)',                 useCase: 'Check error in chain' },
+      { pattern: 'errors.As',        example: 'errors.As(err, &validErr)',                   useCase: 'Extract error type' },
+      { pattern: 'Panic/Recover',    example: 'defer func() { r := recover() }()',           useCase: 'Handle unexpected panics' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-27T00:00:00.000Z'
+  },
+  {
+    id: 'ds_028',
+    name: 'String Manipulation Algorithms',
+    description: 'Dataset of common string algorithms including KMP, Rabin-Karp, Z-algorithm, Aho-Corasick for pattern matching and string search problems.',
+    type: 'advanced',
+    category: 'strings',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['strings', 'pattern-matching', 'kmp', 'rabin-karp', 'algorithms'],
+    data: [
+      { algorithm: 'KMP',          preprocessing: 'O(m)',     searching: 'O(n)',     totalComplexity: 'O(n+m)' },
+      { algorithm: 'Rabin-Karp',   preprocessing: 'O(m)',     searching: 'O(n) avg', totalComplexity: 'O(nm) worst' },
+      { algorithm: 'Z-Algorithm',  preprocessing: 'O(m+n)',   searching: 'O(n+m)',   totalComplexity: 'O(n+m)' },
+      { algorithm: 'Boyer-Moore',  preprocessing: 'O(m+sigma)',searching: 'O(n/m)',  totalComplexity: 'O(n/m) best' },
+      { algorithm: 'Aho-Corasick', preprocessing: 'O(sum m)', searching: 'O(n+matches)', totalComplexity: 'O(n+sum(m)+matches)' },
+      { algorithm: 'Suffix Array', preprocessing: 'O(n log n)',searching: 'O(m log n)', totalComplexity: 'O(n log n)' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-28T00:00:00.000Z'
+  },
+  {
+    id: 'ds_029',
+    name: 'Binary Search Variations',
+    description: 'Dataset of binary search problem variations including first/last occurrence, rotated sorted array, peak element, and search in answer space problems.',
+    type: 'advanced',
+    category: 'algorithms',
+    difficulty: 'advanced',
+    size: 7,
+    source: 'previous-ultimate-dataset',
+    tags: ['binary-search', 'arrays', 'sorted', 'algorithms', 'search'],
+    data: [
+      { variation: 'Classic Binary Search',    complexity: 'O(log n)', condition: 'Sorted array' },
+      { variation: 'First Occurrence',         complexity: 'O(log n)', condition: 'Sorted with duplicates' },
+      { variation: 'Last Occurrence',          complexity: 'O(log n)', condition: 'Sorted with duplicates' },
+      { variation: 'Rotated Sorted Array',     complexity: 'O(log n)', condition: 'One pivot rotation' },
+      { variation: 'Peak Element',             complexity: 'O(log n)', condition: 'Any local peak' },
+      { variation: 'Search on Answer Space',   complexity: 'O(n log k)', condition: 'Monotonic answer' },
+      { variation: 'Sqrt of Number',           complexity: 'O(log n)', condition: 'Non-negative integer' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-29T00:00:00.000Z'
+  },
+  {
+    id: 'ds_030',
+    name: 'System Design Fundamentals',
+    description: 'Core system design concepts dataset covering scalability, load balancing, caching, database sharding, message queues, and CAP theorem.',
+    type: 'advanced',
+    category: 'system-design',
+    difficulty: 'advanced',
+    size: 8,
+    source: 'ultimate',
+    tags: ['system-design', 'scalability', 'caching', 'load-balancing', 'microservices'],
+    data: [
+      { concept: 'Load Balancing',    strategies: ['Round Robin', 'Least Connections', 'IP Hash'],  purpose: 'Distribute traffic' },
+      { concept: 'Caching',           strategies: ['LRU', 'LFU', 'Write-through', 'Write-back'],    purpose: 'Reduce DB load' },
+      { concept: 'DB Sharding',       strategies: ['Range', 'Hash', 'Directory'],                   purpose: 'Horizontal scaling' },
+      { concept: 'Message Queue',     strategies: ['Kafka', 'RabbitMQ', 'SQS'],                     purpose: 'Async decoupling' },
+      { concept: 'CDN',               strategies: ['Push', 'Pull'],                                 purpose: 'Static asset delivery' },
+      { concept: 'CAP Theorem',       strategies: ['CP', 'AP', 'CA'],                               purpose: 'Distributed system tradeoffs' },
+      { concept: 'Rate Limiting',     strategies: ['Token Bucket', 'Sliding Window'],               purpose: 'Prevent abuse' },
+      { concept: 'Consistent Hashing',strategies: ['Virtual nodes', 'Ring'],                        purpose: 'Minimise data reshuffling' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-30T00:00:00.000Z'
+  },
+  {
+    id: 'ds_031',
+    name: 'Go Context Package Patterns',
+    description: 'Dataset covering Go context.Context usage patterns including WithCancel, WithTimeout, WithDeadline, and WithValue for goroutine lifecycle management.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'previous-ultimate-dataset',
+    tags: ['context', 'go', 'goroutines', 'cancel', 'timeout', 'deadline'],
+    data: [
+      { function: 'context.Background()', useCase: 'Root context, never cancelled',           example: 'Entry point of request chain' },
+      { function: 'context.WithCancel()', useCase: 'Manual cancellation propagation',          example: 'Stop goroutine on user request' },
+      { function: 'context.WithTimeout()',useCase: 'Auto-cancel after duration',              example: 'HTTP request with 5s timeout' },
+      { function: 'context.WithDeadline()',useCase: 'Cancel at absolute time',                example: 'Task must finish by 3pm' },
+      { function: 'context.WithValue()', useCase: 'Pass request-scoped values down call chain',example: 'User ID in middleware chain' }
+    ],
+    isActive: true,
+    createdAt: '2024-01-31T00:00:00.000Z'
+  },
+  {
+    id: 'ds_032',
+    name: 'Trie Data Structure Patterns',
+    description: 'Trie (prefix tree) implementation patterns for autocomplete, word search, and IP routing problems. Includes compressed tries and suffix tries.',
+    type: 'advanced',
+    category: 'data-structures',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'previous-ultimate-dataset',
+    tags: ['trie', 'prefix-tree', 'autocomplete', 'strings', 'data-structures'],
+    data: [
+      { operation: 'Insert',   complexity: 'O(m)',       m_meaning: 'Length of word' },
+      { operation: 'Search',   complexity: 'O(m)',       m_meaning: 'Length of word' },
+      { operation: 'StartsWith',complexity: 'O(m)',      m_meaning: 'Length of prefix' },
+      { operation: 'Delete',   complexity: 'O(m)',       m_meaning: 'Length of word' },
+      { operation: 'AutoComplete', complexity: 'O(p+n)', m_meaning: 'prefix length + results' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-01T00:00:00.000Z'
+  },
+  {
+    id: 'ds_033',
+    name: 'Bit Manipulation Techniques',
+    description: 'Dataset of common bit manipulation tricks and techniques used in competitive programming including XOR swaps, power of 2 checks, and bit counting.',
+    type: 'advanced',
+    category: 'algorithms',
+    difficulty: 'advanced',
+    size: 8,
+    source: 'previous-ultimate-dataset',
+    tags: ['bit-manipulation', 'xor', 'bitmask', 'algorithms', 'competitive-programming'],
+    data: [
+      { trick: 'Check Even/Odd',     expression: 'n & 1 == 0',         result: '0 if even, 1 if odd' },
+      { trick: 'Power of 2',         expression: 'n & (n-1) == 0',     result: 'true if power of 2' },
+      { trick: 'Set Kth Bit',        expression: 'n | (1 << k)',        result: 'n with kth bit set' },
+      { trick: 'Unset Kth Bit',      expression: 'n & ~(1 << k)',       result: 'n with kth bit cleared' },
+      { trick: 'Toggle Kth Bit',     expression: 'n ^ (1 << k)',        result: 'n with kth bit flipped' },
+      { trick: 'Count Set Bits',     expression: 'Brian Kernighan algo',result: 'Number of 1-bits' },
+      { trick: 'XOR Swap',           expression: 'a^=b; b^=a; a^=b;',  result: 'Swap without temp var' },
+      { trick: 'Lowest Set Bit',     expression: 'n & (-n)',            result: 'Isolate lowest set bit' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-02T00:00:00.000Z'
+  },
+  {
+    id: 'ds_034',
+    name: 'Two Pointer Technique',
+    description: 'Two pointer and multi-pointer pattern dataset for array and string problems including pair sum, container with most water, and trapping rain water.',
+    type: 'advanced',
+    category: 'algorithms',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['two-pointers', 'arrays', 'sorting', 'algorithms', 'pointers'],
+    data: [
+      { problem: 'Pair Sum',            pointers: 2, startPosition: 'Both ends',   complexity: 'O(n)' },
+      { problem: 'Remove Duplicates',   pointers: 2, startPosition: 'Both start', complexity: 'O(n)' },
+      { problem: 'Container Most Water',pointers: 2, startPosition: 'Both ends',   complexity: 'O(n)' },
+      { problem: 'Trapping Rain Water', pointers: 2, startPosition: 'Both ends',   complexity: 'O(n)' },
+      { problem: '3Sum',                pointers: 3, startPosition: 'Sort + fix one', complexity: 'O(n^2)' },
+      { problem: 'Merge Sorted Arrays', pointers: 2, startPosition: 'Each array start', complexity: 'O(m+n)' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-03T00:00:00.000Z'
+  },
+  {
+    id: 'ds_035',
+    name: 'Go WaitGroup Usage Patterns',
+    description: 'Dataset showing sync.WaitGroup usage patterns in Go for coordinating multiple goroutines, including common mistakes and best practices.',
+    type: 'basic',
+    category: 'concurrency',
+    difficulty: 'basic',
+    size: 5,
+    source: 'custom',
+    tags: ['waitgroup', 'go', 'goroutines', 'sync', 'concurrency'],
+    data: [
+      { pattern: 'Basic WaitGroup',   description: 'Add before goroutine, Done in defer, Wait at end', safeToUse: true  },
+      { pattern: 'Nested WaitGroup',  description: 'Separate WaitGroup per goroutine group',            safeToUse: true  },
+      { pattern: 'WG in Closure',     description: 'Pass WaitGroup pointer to goroutine',               safeToUse: true  },
+      { pattern: 'WG by Value',       description: 'Copying WaitGroup struct - DO NOT DO THIS',         safeToUse: false },
+      { pattern: 'WG with Channels',  description: 'Combine WaitGroup with done channel for results',  safeToUse: true  }
+    ],
+    isActive: true,
+    createdAt: '2024-02-04T00:00:00.000Z'
+  },
+  {
+    id: 'ds_036',
+    name: 'Greedy Algorithm Patterns',
+    description: 'Greedy algorithm patterns dataset for interval scheduling, activity selection, coin change (greedy version), and job sequencing problems.',
+    type: 'advanced',
+    category: 'algorithms',
+    difficulty: 'advanced',
+    size: 7,
+    source: 'previous-ultimate-dataset',
+    tags: ['greedy', 'algorithms', 'interval', 'scheduling', 'activity-selection'],
+    data: [
+      { problem: 'Activity Selection',    approach: 'Sort by end time, pick earliest ending',     complexity: 'O(n log n)' },
+      { problem: 'Fractional Knapsack',   approach: 'Sort by value/weight, take fractions',       complexity: 'O(n log n)' },
+      { problem: 'Coin Change (greedy)',  approach: 'Always pick largest denomination possible',   complexity: 'O(n)' },
+      { problem: 'Job Sequencing',        approach: 'Sort by profit, assign latest deadline slot', complexity: 'O(n^2)' },
+      { problem: 'Huffman Encoding',      approach: 'Min-heap, merge two lowest freq nodes',       complexity: 'O(n log n)' },
+      { problem: 'Jump Game',             approach: 'Track max reachable index greedily',          complexity: 'O(n)' },
+      { problem: 'Meeting Rooms',         approach: 'Sort by start, check overlap with last end',  complexity: 'O(n log n)' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-05T00:00:00.000Z'
+  },
+  {
+    id: 'ds_037',
+    name: 'Linked List Algorithm Patterns',
+    description: 'Dataset of linked list algorithm patterns including cycle detection, middle element, merge, and reverse operations using Floyd\'s and runner techniques.',
+    type: 'advanced',
+    category: 'data-structures',
+    difficulty: 'advanced',
+    size: 7,
+    source: 'previous-ultimate-dataset',
+    tags: ['linked-list', 'Floyd', 'slow-fast', 'cycle', 'merge', 'reverse'],
+    data: [
+      { pattern: 'Cycle Detection',    technique: 'Slow/Fast pointers (Floyd)',  complexity: 'O(n)',   space: 'O(1)' },
+      { pattern: 'Middle Element',     technique: 'Slow/Fast pointers',           complexity: 'O(n)',   space: 'O(1)' },
+      { pattern: 'Reverse List',       technique: 'Three pointers (prev,curr,next)', complexity: 'O(n)', space: 'O(1)' },
+      { pattern: 'Merge Sorted Lists', technique: 'Recursive or iterative merge', complexity: 'O(m+n)', space: 'O(1)' },
+      { pattern: 'Kth from End',       technique: 'Two pointer with K gap',       complexity: 'O(n)',   space: 'O(1)' },
+      { pattern: 'Intersection Point', technique: 'Two pointer align lengths',     complexity: 'O(m+n)', space: 'O(1)' },
+      { pattern: 'Palindrome Check',   technique: 'Reverse second half, compare', complexity: 'O(n)',   space: 'O(1)' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-06T00:00:00.000Z'
+  },
+  {
+    id: 'ds_038',
+    name: 'OOP Design Patterns in Go',
+    description: 'Gang of Four design patterns implemented in Go including Singleton, Factory, Observer, Strategy, and Decorator patterns with Go-specific adaptations.',
+    type: 'advanced',
+    category: 'design-patterns',
+    difficulty: 'advanced',
+    size: 8,
+    source: 'ultimate',
+    tags: ['design-patterns', 'go', 'singleton', 'factory', 'observer', 'strategy'],
+    data: [
+      { pattern: 'Singleton',    category: 'Creational',  goApproach: 'sync.Once',                 useCase: 'DB connection pool' },
+      { pattern: 'Factory',      category: 'Creational',  goApproach: 'Constructor function',       useCase: 'Create different types' },
+      { pattern: 'Builder',      category: 'Creational',  goApproach: 'Method chaining struct',     useCase: 'Complex object creation' },
+      { pattern: 'Observer',     category: 'Behavioral',  goApproach: 'Channels + goroutines',      useCase: 'Event system' },
+      { pattern: 'Strategy',     category: 'Behavioral',  goApproach: 'Interface + inject impl',    useCase: 'Swap algorithms' },
+      { pattern: 'Decorator',    category: 'Structural',  goApproach: 'Function wrapping',          useCase: 'Middleware, logging' },
+      { pattern: 'Adapter',      category: 'Structural',  goApproach: 'Wrapper struct',             useCase: 'Third-party library wrap' },
+      { pattern: 'Command',      category: 'Behavioral',  goApproach: 'Function type as command',   useCase: 'Undo/redo, task queue' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-07T00:00:00.000Z'
+  },
+  {
+    id: 'ds_039',
+    name: 'Segment Tree Operations',
+    description: 'Segment tree operations dataset for range sum, range min/max queries and point updates. Includes lazy propagation for range update problems.',
+    type: 'advanced',
+    category: 'data-structures',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'previous-ultimate-dataset',
+    tags: ['segment-tree', 'range-query', 'lazy-propagation', 'data-structures'],
+    data: [
+      { operation: 'Build',         complexity: 'O(n)',     space: 'O(4n)', description: 'Build tree from array' },
+      { operation: 'Point Update',  complexity: 'O(log n)', space: 'O(1)',  description: 'Update single element' },
+      { operation: 'Range Query',   complexity: 'O(log n)', space: 'O(1)',  description: 'Query range [l, r]' },
+      { operation: 'Range Update',  complexity: 'O(log n)', space: 'O(1)',  description: 'Update range with lazy' },
+      { operation: 'Lazy Propagate',complexity: 'O(log n)', space: 'O(4n)', description: 'Deferred range updates' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-08T00:00:00.000Z'
+  },
+  {
+    id: 'ds_040',
+    name: 'Concurrency Bug Patterns',
+    description: 'Common concurrency bug patterns in Go with examples, symptoms, and fixes. Covers data races, goroutine leaks, livelocks, and starvation.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'ultimate',
+    tags: ['concurrency', 'bugs', 'data-race', 'goroutine-leak', 'livelock', 'go'],
+    data: [
+      { bug: 'Data Race',       symptom: 'Inconsistent results, random crashes',    fix: 'Use mutex or atomic operations',     detectTool: 'go race detector' },
+      { bug: 'Goroutine Leak',  symptom: 'Memory grows, goroutines never exit',     fix: 'Always have exit condition or context',detectTool: 'pprof goroutine profile' },
+      { bug: 'Deadlock',        symptom: 'Program hangs completely',                fix: 'Consistent lock ordering, timeouts',  detectTool: 'Go runtime fatal error' },
+      { bug: 'Livelock',        symptom: 'Goroutines active but no progress',       fix: 'Add randomization or backoff',        detectTool: 'Manual inspection' },
+      { bug: 'Starvation',      symptom: 'Some goroutines never get CPU time',      fix: 'Use fair scheduling, priority queue', detectTool: 'pprof CPU profile' },
+      { bug: 'False Sharing',   symptom: 'Slow performance on multi-core',          fix: 'Pad struct to cache line size (64B)',  detectTool: 'CPU performance counters' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-09T00:00:00.000Z'
+  },
+  {
+    id: 'ds_041',
+    name: 'Union-Find (Disjoint Set) Patterns',
+    description: 'Union-Find algorithm patterns for connected components, cycle detection in undirected graphs, and Kruskal MST algorithm implementation.',
+    type: 'advanced',
+    category: 'data-structures',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'previous-ultimate-dataset',
+    tags: ['union-find', 'disjoint-set', 'connected-components', 'MST', 'kruskal'],
+    data: [
+      { operation: 'Find',         optimization: 'Path Compression',  complexity: 'O(alpha(n)) amortized' },
+      { operation: 'Union',        optimization: 'Union by Rank/Size', complexity: 'O(alpha(n)) amortized' },
+      { operation: 'Cycle Detect', optimization: 'None needed',       complexity: 'O(E * alpha(V))' },
+      { operation: 'Components',   optimization: 'Both',              complexity: 'O(E * alpha(V))' },
+      { operation: 'Kruskal MST',  optimization: 'Sort + Union-Find', complexity: 'O(E log E)' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-10T00:00:00.000Z'
+  },
+  {
+    id: 'ds_042',
+    name: 'Go Testing Best Practices',
+    description: 'Dataset of Go testing patterns covering unit tests, table-driven tests, benchmarks, subtests, and test coverage techniques using testing package.',
+    type: 'basic',
+    category: 'go-lang',
+    difficulty: 'basic',
+    size: 7,
+    source: 'custom',
+    tags: ['testing', 'go', 'unit-test', 'benchmark', 'table-driven', 'coverage'],
+    data: [
+      { pattern: 'Basic Test',        function: 'TestXxx(t *testing.T)',      useCase: 'Simple assertion test' },
+      { pattern: 'Table Driven',      function: 'for _, tc := range tests {}', useCase: 'Multiple input/output pairs' },
+      { pattern: 'Sub Test',          function: 't.Run("name", func(t){})',    useCase: 'Grouped logical tests' },
+      { pattern: 'Benchmark',         function: 'BenchmarkXxx(b *testing.B)', useCase: 'Measure performance' },
+      { pattern: 'Test Helper',       function: 't.Helper()',                  useCase: 'DRY test utility functions' },
+      { pattern: 'Parallel Test',     function: 't.Parallel()',                useCase: 'Run tests concurrently' },
+      { pattern: 'Coverage',          function: 'go test -cover',              useCase: 'Measure code coverage %' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-11T00:00:00.000Z'
+  },
+  {
+    id: 'ds_043',
+    name: 'Monotonic Stack Problems',
+    description: 'Monotonic stack patterns for Next Greater Element, Stock Span, Largest Rectangle in Histogram, and Trapping Rain Water problems.',
+    type: 'advanced',
+    category: 'data-structures',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['monotonic-stack', 'stack', 'arrays', 'next-greater', 'histogram'],
+    data: [
+      { problem: 'Next Greater Element',          stackType: 'Decreasing', complexity: 'O(n)', direction: 'Right to left' },
+      { problem: 'Previous Smaller Element',       stackType: 'Increasing', complexity: 'O(n)', direction: 'Left to right' },
+      { problem: 'Stock Span',                     stackType: 'Decreasing', complexity: 'O(n)', direction: 'Left to right' },
+      { problem: 'Largest Rectangle Histogram',    stackType: 'Increasing', complexity: 'O(n)', direction: 'Left to right' },
+      { problem: 'Trapping Rain Water',            stackType: 'Decreasing', complexity: 'O(n)', direction: 'Left to right' },
+      { problem: 'Daily Temperatures',             stackType: 'Decreasing', complexity: 'O(n)', direction: 'Left to right' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-12T00:00:00.000Z'
+  },
+  {
+    id: 'ds_044',
+    name: 'Database Query Optimization',
+    description: 'Dataset covering SQL and NoSQL query optimization techniques including indexing strategies, query planning, N+1 problem, and connection pooling.',
+    type: 'advanced',
+    category: 'database',
+    difficulty: 'advanced',
+    size: 7,
+    source: 'ultimate',
+    tags: ['database', 'indexing', 'query', 'optimization', 'sql', 'nosql'],
+    data: [
+      { technique: 'Composite Index',  benefit: 'Covers multi-column WHERE clauses',          example: 'INDEX(user_id, created_at)' },
+      { technique: 'Covering Index',   benefit: 'Satisfies query from index alone, no table lookup', example: 'INDEX includes all SELECT cols' },
+      { technique: 'Query Explain',    benefit: 'Shows execution plan and cost estimates',    example: 'EXPLAIN SELECT * FROM ...' },
+      { technique: 'N+1 Elimination', benefit: 'Replace N loops with 1 join or batch fetch', example: 'Eager load relations' },
+      { technique: 'Connection Pool',  benefit: 'Reuse DB connections, reduce overhead',      example: 'pgxpool.New(ctx, connStr)' },
+      { technique: 'Read Replica',     benefit: 'Route reads to replica, writes to primary', example: 'Scale read-heavy workloads' },
+      { technique: 'Pagination',       benefit: 'Avoid full table scan with LIMIT + OFFSET',  example: 'LIMIT 10 OFFSET 100' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-13T00:00:00.000Z'
+  },
+  {
+    id: 'ds_045',
+    name: 'Advanced Concurrency: Semaphores',
+    description: 'Semaphore implementation and usage patterns in Go using channels as semaphores for controlling access to limited resources.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'previous-ultimate-dataset',
+    tags: ['semaphore', 'channel', 'concurrency', 'go', 'resource-limiting'],
+    data: [
+      { type: 'Counting Semaphore',  implementation: 'Buffered channel of capacity N',     useCase: 'Limit concurrent DB connections' },
+      { type: 'Binary Semaphore',    implementation: 'Buffered channel of capacity 1',     useCase: 'Mutual exclusion (like mutex)' },
+      { type: 'Weighted Semaphore',  implementation: 'golang.org/x/sync/semaphore',        useCase: 'Different weight resources' },
+      { type: 'Acquire (P)',         implementation: 'sem <- struct{}{}',                   useCase: 'Acquire permit before entering' },
+      { type: 'Release (V)',         implementation: '<-sem',                               useCase: 'Release permit on completion' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-14T00:00:00.000Z'
+  },
+  {
+    id: 'ds_046',
+    name: 'Interval-Based Algorithm Patterns',
+    description: 'Interval manipulation patterns for merging overlapping intervals, meeting room scheduling, minimum platforms, and insert interval problems.',
+    type: 'advanced',
+    category: 'algorithms',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['intervals', 'sorting', 'greedy', 'merge', 'scheduling', 'algorithms'],
+    data: [
+      { problem: 'Merge Intervals',      approach: 'Sort by start, merge if overlap',    complexity: 'O(n log n)' },
+      { problem: 'Insert Interval',      approach: 'Find position, merge as needed',     complexity: 'O(n)' },
+      { problem: 'Meeting Rooms I',      approach: 'Sort, check if next start < prev end', complexity: 'O(n log n)' },
+      { problem: 'Meeting Rooms II',     approach: 'Min-Heap track room end times',      complexity: 'O(n log n)' },
+      { problem: 'Min Platforms',        approach: 'Sort arrivals/departures, two pointers', complexity: 'O(n log n)' },
+      { problem: 'Non-overlapping',      approach: 'Sort by end, greedily remove fewest',complexity: 'O(n log n)' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-15T00:00:00.000Z'
+  },
+  {
+    id: 'ds_047',
+    name: 'Go Profiling and Performance Tools',
+    description: 'Dataset of Go profiling tools and techniques including pprof, trace, race detector, and memory profiling for identifying performance bottlenecks.',
+    type: 'advanced',
+    category: 'go-lang',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'ultimate',
+    tags: ['profiling', 'pprof', 'performance', 'go', 'memory', 'cpu'],
+    data: [
+      { tool: 'go race detector',   command: 'go test -race',           detects: 'Data races in concurrent code' },
+      { tool: 'CPU Profile',        command: 'pprof cpu.prof',          detects: 'Functions consuming most CPU' },
+      { tool: 'Memory Profile',     command: 'pprof mem.prof',          detects: 'Heap allocations and leaks' },
+      { tool: 'Goroutine Profile',  command: 'pprof goroutine.prof',    detects: 'Leaked or stuck goroutines' },
+      { tool: 'Execution Trace',    command: 'go tool trace trace.out', detects: 'Goroutine scheduling events' },
+      { tool: 'Benchmark',          command: 'go test -bench=. -benchmem', detects: 'Performance regression' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-16T00:00:00.000Z'
+  },
+  {
+    id: 'ds_048',
+    name: 'Number Theory for Competitive Programming',
+    description: 'Mathematical algorithms dataset for competitive programming including GCD/LCM, prime sieve, modular exponentiation, and combinatorics.',
+    type: 'advanced',
+    category: 'math',
+    difficulty: 'advanced',
+    size: 8,
+    source: 'previous-ultimate-dataset',
+    tags: ['number-theory', 'math', 'prime', 'gcd', 'modular', 'competitive-programming'],
+    data: [
+      { algorithm: 'Euclidean GCD',         complexity: 'O(log min(a,b))', useCase: 'Greatest common divisor' },
+      { algorithm: 'Sieve of Eratosthenes', complexity: 'O(n log log n)', useCase: 'All primes up to n' },
+      { algorithm: 'Modular Exponentiation',complexity: 'O(log n)',        useCase: 'a^b mod p efficiently' },
+      { algorithm: 'Modular Inverse',       complexity: 'O(log p)',        useCase: 'Division in modular arithmetic' },
+      { algorithm: 'Chinese Remainder',     complexity: 'O(n log n)',      useCase: 'System of modular equations' },
+      { algorithm: 'Fast Fourier Transform',complexity: 'O(n log n)',      useCase: 'Polynomial multiplication' },
+      { algorithm: 'Catalan Numbers',       complexity: 'O(n)',            useCase: 'Count valid BSTs, brackets' },
+      { algorithm: 'Fibonacci Fast Doubling',complexity: 'O(log n)',       useCase: 'Compute nth Fibonacci fast' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-17T00:00:00.000Z'
+  },
+  {
+    id: 'ds_049',
+    name: 'Go Reflection and Generics',
+    description: 'Dataset covering Go reflect package usage patterns and Go 1.18+ generics with type parameters, type constraints, and generic data structures.',
+    type: 'advanced',
+    category: 'go-lang',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'previous-ultimate-dataset',
+    tags: ['reflection', 'generics', 'go', 'type-parameters', 'go1.18'],
+    data: [
+      { feature: 'reflect.TypeOf()',   useCase: 'Get runtime type information',          example: 'Dynamic dispatch, serialization' },
+      { feature: 'reflect.ValueOf()',  useCase: 'Get/set runtime values dynamically',    example: 'Generic copy functions' },
+      { feature: 'Generic Functions',  useCase: 'Type-safe reusable functions',          example: 'func Map[T, U any](slice []T) []U' },
+      { feature: 'Type Constraints',   useCase: 'Restrict generic types',                example: 'comparable, Ordered, Number' },
+      { feature: 'Generic Structs',    useCase: 'Type-safe data structures',             example: 'type Stack[T any] struct{...}' },
+      { feature: 'Type Inference',     useCase: 'Omit type params when inferrable',      example: 'Map(nums, fn) instead of Map[int](nums, fn)' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-18T00:00:00.000Z'
+  },
+  {
+    id: 'ds_050',
+    name: 'Advanced Search Algorithms',
+    description: 'Dataset of advanced search algorithm techniques including A* search, bidirectional BFS, IDA*, and beam search for pathfinding and optimization problems.',
+    type: 'advanced',
+    category: 'algorithms',
+    difficulty: 'advanced',
+    size: 6,
+    source: 'ultimate',
+    tags: ['a-star', 'pathfinding', 'bidirectional-bfs', 'search', 'heuristic'],
+    data: [
+      { algorithm: 'A* Search',         heuristic: true,  complexity: 'O(b^d)',      optimal: true,  complete: true  },
+      { algorithm: 'Bidirectional BFS', heuristic: false, complexity: 'O(b^(d/2))', optimal: true,  complete: true  },
+      { algorithm: 'IDA*',              heuristic: true,  complexity: 'O(b^d)',      optimal: true,  complete: true  },
+      { algorithm: 'Greedy Best-First', heuristic: true,  complexity: 'O(b^m)',      optimal: false, complete: false },
+      { algorithm: 'Beam Search',       heuristic: true,  complexity: 'O(k*b*d)',    optimal: false, complete: false },
+      { algorithm: 'Monte Carlo Tree',  heuristic: false, complexity: 'O(iterations)', optimal: false, complete: false }
+    ],
+    isActive: true,
+    createdAt: '2024-02-19T00:00:00.000Z'
+  },
+  {
+    id: 'ds_051',
+    name: 'Microservices Communication Patterns',
+    description: 'Dataset of microservices communication patterns including REST, gRPC, message queues, event sourcing, saga pattern, and circuit breaker.',
+    type: 'advanced',
+    category: 'system-design',
+    difficulty: 'advanced',
+    size: 7,
+    source: 'previous-ultimate-dataset',
+    tags: ['microservices', 'grpc', 'rest', 'event-sourcing', 'saga', 'circuit-breaker'],
+    data: [
+      { pattern: 'REST API',         communication: 'Sync',  protocol: 'HTTP/HTTPS', useCase: 'Simple CRUD between services' },
+      { pattern: 'gRPC',             communication: 'Sync',  protocol: 'HTTP/2',     useCase: 'High-perf binary RPC' },
+      { pattern: 'Message Queue',    communication: 'Async', protocol: 'AMQP/Kafka', useCase: 'Decoupled event processing' },
+      { pattern: 'Event Sourcing',   communication: 'Async', protocol: 'Kafka',      useCase: 'Audit log, replay events' },
+      { pattern: 'Saga Pattern',     communication: 'Async', protocol: 'Events',     useCase: 'Distributed transactions' },
+      { pattern: 'Circuit Breaker',  communication: 'Sync',  protocol: 'Any',        useCase: 'Prevent cascade failures' },
+      { pattern: 'Service Mesh',     communication: 'Sync',  protocol: 'Envoy/Istio',useCase: 'Observability, mTLS, routing' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-20T00:00:00.000Z'
+  },
+  {
+    id: 'ds_052',
+    name: 'Go Channel Direction and Ownership',
+    description: 'Dataset explaining Go channel ownership rules, directional channel types (chan<- T and <-chan T), and best practices for channel passing patterns.',
+    type: 'advanced',
+    category: 'concurrency',
+    difficulty: 'advanced',
+    size: 5,
+    source: 'ultimate',
+    tags: ['channels', 'go', 'ownership', 'goroutines', 'concurrency', 'direction'],
+    data: [
+      { type: 'chan T',    direction: 'Bidirectional', canSend: true,  canReceive: true,  useCase: 'Channel creation in main goroutine' },
+      { type: 'chan<- T',  direction: 'Send-only',     canSend: true,  canReceive: false, useCase: 'Producer goroutine parameter' },
+      { type: '<-chan T',  direction: 'Receive-only',  canSend: false, canReceive: true,  useCase: 'Consumer goroutine parameter' },
+      { type: 'close(ch)',direction: 'Ownership rule', canSend: false, canReceive: true,  useCase: 'Only owner/sender closes channel' },
+      { type: 'nil chan',  direction: 'Blocks forever', canSend: false, canReceive: false, useCase: 'Disable select case dynamically' }
+    ],
+    isActive: true,
+    createdAt: '2024-02-21T00:00:00.000Z'
   }
 ];
 
